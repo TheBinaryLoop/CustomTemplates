@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DebuggableInstallableService.Framework
+namespace $safeprojectname$.Framework
 {
     public static class ConsoleHarness
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DebuggableInstallableService.Framework
+namespace $safeprojectname$.Framework
 {
     /// <summary>
 	/// Extension methods for the Type class

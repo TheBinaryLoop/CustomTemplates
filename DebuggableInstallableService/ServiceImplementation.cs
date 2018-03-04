@@ -1,7 +1,7 @@
 ﻿using DebuggableInstallableService.Framework;
 using System.ServiceProcess;
 
-namespace DebuggableInstallableService
+namespace $safeprojectname$
 {
     /// <summary>
 	/// The actual implementation of the windows service goes here...
@@ -20,6 +20,7 @@ namespace DebuggableInstallableService
         /// <param name="args">Any command line arguments</param>
         public void OnStart(string[] args)
         {
+            ConsoleHarness.WriteToConsole(System.ConsoleColor.Green, "OnStart({0})", args);
         }
 
         /// <summary>
@@ -27,6 +28,7 @@ namespace DebuggableInstallableService
         /// </summary>
         public void OnStop()
         {
+            ConsoleHarness.WriteToConsole(System.ConsoleColor.Red, "OnStop()");
         }
 
         /// <summary>
@@ -35,6 +37,7 @@ namespace DebuggableInstallableService
         /// </summary>
         public void OnPause()
         {
+            ConsoleHarness.WriteToConsole(System.ConsoleColor.Magenta, "OnPause()");
         }
 
         /// <summary>
@@ -43,6 +46,7 @@ namespace DebuggableInstallableService
         /// </summary>
         public void OnContinue()
         {
+            ConsoleHarness.WriteToConsole(System.ConsoleColor.Blue, "OnContinue()");
         }
 
         /// <summary>
@@ -51,6 +55,7 @@ namespace DebuggableInstallableService
         /// </summary>
         public void OnShutdown()
         {
+            ConsoleHarness.WriteToConsole(System.ConsoleColor.DarkRed, "OnShutdown()");
         }
 
         /// <summary>
@@ -59,6 +64,7 @@ namespace DebuggableInstallableService
         /// <param name="command">The command identifier to execute.</param >
         public void OnCustomCommand(int command)
         {
+            ConsoleHarness.WriteToConsole(System.ConsoleColor.DarkGreen, "OnCustomCommand({0})", command);
         }
 
         /// <summary>
@@ -67,6 +73,7 @@ namespace DebuggableInstallableService
         /// <filterpriority>2</filterpriority>
         public void Dispose()
         {
+            ConsoleHarness.WriteToConsole(System.ConsoleColor.DarkMagenta, "Dispose()");
         }
 
     }

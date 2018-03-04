@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ServiceProcess;
 
-namespace DebuggableInstallableService.Framework
+namespace $safeprojectname$.Framework
 {
     /// <summary>
 	/// A generic Windows Service that can handle any assembly that

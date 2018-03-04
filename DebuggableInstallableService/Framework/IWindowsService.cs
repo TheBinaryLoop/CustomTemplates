@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DebuggableInstallableService.Framework
+namespace $safeprojectname$.Framework
 {
     /// <summary>
 	/// The interface that any windows service should implement to be used

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ServiceProcess;
 
-namespace DebuggableInstallableService.Framework
+namespace $safeprojectname$.Framework
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
     public class WindowsServiceAttribute : Attribute

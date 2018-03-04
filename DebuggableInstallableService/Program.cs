@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.ServiceProcess;
-using DebuggableInstallableService.Framework;
+using $safeprojectname$.Framework;
 
-namespace DebuggableInstallableService
+namespace $safeprojectname$
 {
     static class Program
     {

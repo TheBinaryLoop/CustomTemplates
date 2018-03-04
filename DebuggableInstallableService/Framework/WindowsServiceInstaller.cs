@@ -7,7 +7,7 @@ using System.Reflection;
 using System.ServiceProcess;
 using System.Linq;
 
-namespace DebuggableInstallableService.Framework
+namespace $safeprojectname$.Framework
 {
     /// <summary>
 	/// A generic windows service installer
