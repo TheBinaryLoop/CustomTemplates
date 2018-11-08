@@ -5,9 +5,9 @@ using System.Linq;
 namespace $safeprojectname$.Framework
 {
     /// <summary>
-	/// Extension methods for the Type class
-	/// </summary>
-	public static class TypeExtensions
+    /// Extension methods for the Type class
+    /// </summary>
+    public static class TypeExtensions
     {
         /// <summary>
         /// Loads the configuration from assembly attributes

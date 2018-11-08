@@ -42,7 +42,6 @@ namespace $safeprojectname$
                     }
                 }
             }
-
             catch (Exception ex)
             {
                 ConsoleHarness.WriteToConsole(ConsoleColor.Red, "An exception occurred in Main(): {0}", ex);

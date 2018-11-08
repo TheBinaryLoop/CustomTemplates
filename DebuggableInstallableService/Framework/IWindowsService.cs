@@ -3,10 +3,10 @@
 namespace $safeprojectname$.Framework
 {
     /// <summary>
-	/// The interface that any windows service should implement to be used
-	/// with the GenericWindowsService executable.
-	/// </summary>
-	public interface IWindowsService : IDisposable
+    /// The interface that any windows service should implement to be used
+    /// with the GenericWindowsService executable.
+    /// </summary>
+    public interface IWindowsService : IDisposable
     {
         /// <summary>
         /// This method is called when the service gets a request to start.

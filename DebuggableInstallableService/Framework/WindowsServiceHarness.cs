@@ -4,10 +4,10 @@ using System.ServiceProcess;
 namespace $safeprojectname$.Framework
 {
     /// <summary>
-	/// A generic Windows Service that can handle any assembly that
-	/// implements IWindowsService (including AbstractWindowsService) 
-	/// </summary>
-	public partial class WindowsServiceHarness : ServiceBase
+    /// A generic Windows Service that can handle any assembly that
+    /// implements IWindowsService (including AbstractWindowsService) 
+    /// </summary>
+    public partial class WindowsServiceHarness : ServiceBase
     {
         /// <summary>
         /// Get the class implementing the windows service

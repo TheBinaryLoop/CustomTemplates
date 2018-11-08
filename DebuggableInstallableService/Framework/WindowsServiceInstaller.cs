@@ -10,9 +10,9 @@ using System.Linq;
 namespace $safeprojectname$.Framework
 {
     /// <summary>
-	/// A generic windows service installer
-	/// </summary>
-	[RunInstaller(true)]
+    /// A generic windows service installer
+    /// </summary>
+    [RunInstaller(true)]
     public partial class WindowsServiceInstaller : Installer
     {
         /// <summary>
@@ -42,15 +42,9 @@ namespace $safeprojectname$.Framework
             }
 
             var attribute = windowsServiceType.GetAttribute<WindowsServiceAttribute>();
-
-            if (attribute == null)
-            {
-                throw new ArgumentException("Type to install must be marked with a WindowsServiceAttribute.",
+            Configuration = attribute ?? throw new ArgumentException("Type to install must be marked with a WindowsServiceAttribute.",
                                             "windowsServiceType");
-            }
-
-            Configuration = attribute;
-        }
+    }
 
 
         /// <summary>
@@ -95,7 +89,7 @@ namespace $safeprojectname$.Framework
         /// Installer class, to use run InstallUtil against this .exe
         /// </summary>
         /// <param name="savedState">The saved state for the installation.</param>
-        public override void Install(System.Collections.IDictionary savedState)
+        public override void Install(IDictionary savedState)
         {
             ConsoleHarness.WriteToConsole(ConsoleColor.White, "Installing service {0}.", Configuration.Name);
 
@@ -119,7 +113,7 @@ namespace $safeprojectname$.Framework
         /// Removes the counters, then calls the base uninstall.
         /// </summary>
         /// <param name="savedState">The saved state for the installation.</param>
-        public override void Uninstall(System.Collections.IDictionary savedState)
+        public override void Uninstall(IDictionary savedState)
         {
             ConsoleHarness.WriteToConsole(ConsoleColor.White, "Un-Installing service {0}.", Configuration.Name);
 
@@ -143,7 +137,7 @@ namespace $safeprojectname$.Framework
         /// Rolls back to the state of the counter, and performs the normal rollback.
         /// </summary>
         /// <param name="savedState">The saved state for the installation.</param>
-        public override void Rollback(System.Collections.IDictionary savedState)
+        public override void Rollback(IDictionary savedState)
         {
             ConsoleHarness.WriteToConsole(ConsoleColor.White, "Rolling back service {0}.", Configuration.Name);
 

@@ -1,12 +1,13 @@
-﻿using DebuggableInstallableService.Framework;
+﻿using System;
 using System.ServiceProcess;
+using $safeprojectname$.Framework;
 
 namespace $safeprojectname$
 {
     /// <summary>
-	/// The actual implementation of the windows service goes here...
-	/// </summary>
-	[WindowsService("$safeprojectname$",
+    /// The actual implementation of the windows service goes here...
+    /// </summary>
+    [WindowsService("$safeprojectname$",
         DisplayName = "$safeprojectname$",
         Description = "The description of the $safeprojectname$ service.",
         EventLogSource = "$safeprojectname$",
@@ -20,7 +21,7 @@ namespace $safeprojectname$
         /// <param name="args">Any command line arguments</param>
         public void OnStart(string[] args)
         {
-            ConsoleHarness.WriteToConsole(System.ConsoleColor.Green, "OnStart({0})", args);
+            ConsoleHarness.WriteToConsole(ConsoleColor.Green, "OnStart({0})", args);
         }
 
         /// <summary>
@@ -28,7 +29,7 @@ namespace $safeprojectname$
         /// </summary>
         public void OnStop()
         {
-            ConsoleHarness.WriteToConsole(System.ConsoleColor.Red, "OnStop()");
+            ConsoleHarness.WriteToConsole(ConsoleColor.Red, "OnStop()");
         }
 
         /// <summary>
@@ -37,7 +38,7 @@ namespace $safeprojectname$
         /// </summary>
         public void OnPause()
         {
-            ConsoleHarness.WriteToConsole(System.ConsoleColor.Magenta, "OnPause()");
+            ConsoleHarness.WriteToConsole(ConsoleColor.Magenta, "OnPause()");
         }
 
         /// <summary>
@@ -46,7 +47,7 @@ namespace $safeprojectname$
         /// </summary>
         public void OnContinue()
         {
-            ConsoleHarness.WriteToConsole(System.ConsoleColor.Blue, "OnContinue()");
+            ConsoleHarness.WriteToConsole(ConsoleColor.Blue, "OnContinue()");
         }
 
         /// <summary>
@@ -55,7 +56,7 @@ namespace $safeprojectname$
         /// </summary>
         public void OnShutdown()
         {
-            ConsoleHarness.WriteToConsole(System.ConsoleColor.DarkRed, "OnShutdown()");
+            ConsoleHarness.WriteToConsole(ConsoleColor.DarkRed, "OnShutdown()");
         }
 
         /// <summary>
@@ -64,7 +65,7 @@ namespace $safeprojectname$
         /// <param name="command">The command identifier to execute.</param >
         public void OnCustomCommand(int command)
         {
-            ConsoleHarness.WriteToConsole(System.ConsoleColor.DarkGreen, "OnCustomCommand({0})", command);
+            ConsoleHarness.WriteToConsole(ConsoleColor.DarkGreen, "OnCustomCommand({0})", command);
         }
 
         /// <summary>
@@ -73,7 +74,7 @@ namespace $safeprojectname$
         /// <filterpriority>2</filterpriority>
         public void Dispose()
         {
-            ConsoleHarness.WriteToConsole(System.ConsoleColor.DarkMagenta, "Dispose()");
+            ConsoleHarness.WriteToConsole(ConsoleColor.DarkMagenta, "Dispose()");
         }
 
     }
