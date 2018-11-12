@@ -32,7 +32,9 @@ namespace $safeprojectname$.Framework
         /// if the UserName is empty or null, this property is ignored.
         /// </summary>
         public string Password { get; set; }
-
+        
+        public ServiceAccount Account { get; set; }
+        
         /// <summary>
         /// True if service should log the start, stop, pause and continue commands (defaults to false).
         /// </summary>
@@ -103,6 +105,7 @@ namespace $safeprojectname$.Framework
             EventLogSource = null;
             Password = null;
             UserName = null;
+      Account = ServiceAccount.LocalService;
         }
     }
 }

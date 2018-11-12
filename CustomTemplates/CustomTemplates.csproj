@@ -32,7 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ItemTemplates\Enum.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
